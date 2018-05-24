@@ -1,0 +1,21 @@
+1. read bookkeeping.json
+2. for each pair in the json file, get the folder number, 
+file number, and url name
+3. parse each pair and tokenize the word in each document
+4. for each word, then generate 
+
+frequency of occurrence for word in each document
+inverse document frequency for each word
+tf-idf weighting (Wt,d=[1+ log(tft,d)] x log(N/dft))
+
+5. query
+
+normalize by dividing by the length
+sorted by cosine similarity
+
+5. build inverted index based on the information above
+6. store inverted index into a new json file (mongoDB), token will
+be the key and the posting list is the value
+
+7. we can use mongoDB to store and retrieve json files
+ 
